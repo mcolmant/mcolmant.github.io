@@ -1,0 +1,15 @@
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
+
+  <link rel="stylesheet" href="{{ "/assets/bootstrap/css/bootstrap.min.css" | prepend: site.baseurl }}">
+  <link rel="stylesheet" href="{{ "/css/common.css" | prepend: site.baseurl }}">
+
+  {% assign additional_css = page.additional_css | split: ';' %}
+  {% for path in additional_css | split: ';' %}
+    <link rel="stylesheet" href="{{ path | prepend: site.baseurl }}">
+  {% endfor %}
+</head>

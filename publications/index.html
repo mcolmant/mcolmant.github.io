@@ -1,0 +1,19 @@
+---
+layout: default
+title: Publications
+
+additional_css: '/css/publications.css'
+additional_js: ''
+---
+
+<div id="content" class="row">
+  <div class="col-md-12">
+    <h3>
+      <span style="margin-right: 20px" class="glyphicon glyphicon-book"></span>
+      My publications
+    </h3>
+    <hr>
+    <h4>2014</h4>
+    {% bibliography --query @*[year=2014] %}
+  </div>
+</div>

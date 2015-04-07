@@ -1,0 +1,19 @@
+# Site settings
+name: Maxime Colmant's website
+description: Personal website of Maxime Colmant
+url: http://mcolmant.github.io
+last_update: 03/2015
+
+# Build settings
+markdown: kramdown
+gems: ['jekyll/scholar', 'jekyll-sitemap']
+
+scholar:
+  style: ieee.csl
+  locale: en
+
+  source: ./_bibliography
+  bibliography: bibliography.bib
+  bibliography_template: entry-bib
+
+exclude: ['Rakefile', 'README.md', "*.sublime-project", "*.sublime-workspace", ".DS_Store"]

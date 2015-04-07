@@ -1,0 +1,28 @@
+<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        {% for p in site.pages %}
+        <span class="icon-bar"></span>
+        {% endfor %}
+      </button>
+    </div>
+    <div class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li {% if page.title == "Home" %}class="active"{% endif %}>
+          <a href={{ "/" | prepend: site.baseurl }}>Home</a>
+        </li>
+        {% for p in site.pages %}
+          {% if p.layout != None and p.title != "Home" and p.title != "Contact" %}
+          <li {% if p.title == page.title %}class="active"{% endif %}>
+            <a href="{{ p.url | remove: 'index.html' | prepend: site.baseurl }}">{{ p.title }}</a>
+          </li>
+          {% endif %}
+        {% endfor %}
+        <li {% if page.title == "Contact" %}class="active"{% endif %}>
+          <a href={{ "/contact/" | prepend: site.baseurl }}>Contact</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
