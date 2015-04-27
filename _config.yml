@@ -12,6 +12,9 @@ scholar:
   style: ieee.csl
   locale: en
 
+  sort_by: year
+  order: descending
+
   source: ./_bibliography
   bibliography: bibliography.bib
   bibliography_template: entry-bib
