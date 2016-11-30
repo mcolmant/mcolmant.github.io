@@ -24,9 +24,8 @@ task :publish => [:generate] do
     system "git rm -rf *"
     system "mv #{tmp}/* ."
     system "touch .nojekyll"
-    message = "Site updated at #{Time.now.utc}"
     system "git add ."
-    system "git commit -am #{message.shellescape}"
+    system "git commit -am 'site updated'"
     system "git push origin master --force"
     system "git checkout code"
   end
