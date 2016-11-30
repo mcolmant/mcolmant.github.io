@@ -13,9 +13,19 @@ additional_js: ''
       My publications
     </h3>
     <hr>
-    <h4>Conferences</h4>
-    {% bibliography --query @inproceedings %}
-    <h4>Others</h4>
-    {% bibliography --query @misc %}
+    <div class="col-md-12">
+      <h4>Thesis</h4>
+      {% bibliography --query @phdthesis %}
+    </div>
+
+    <div class="col-md-12">
+      <h4>Conferences</h4>
+      {% bibliography --query @inproceedings %}
+    </div>
+
+    <div class="col-md-12">
+      <h4>Others</h4>
+      {% bibliography --query @misc %}
+    </div>
   </div>
 </div>
