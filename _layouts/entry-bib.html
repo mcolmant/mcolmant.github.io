@@ -16,7 +16,7 @@
 {% endfor %}
 
 {% assign last_author = entry.author_array | last %}
-{% if entry.author_array > 1 %}
+{% if entry.author_array.size > 1 %}
 and
 {% endif %}
 {{ last_author.first | slice: 0 }}. {{ last_author.last }},
