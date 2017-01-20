@@ -1,9 +1,37 @@
 ---
 ---
 
-{{ reference }}
-{% if entry.url %}
-<a href="{{ entry.url }}">
-  <span class="glyphicon glyphicon-paperclip"></span>
-</a>
+<!-- {{ reference }}
+{{ entry}}
+{{index}} -->
+<!-- {{ entry.author_array }} -->
+
+[{{index}}]
+
+{% for author in entry.author_array %}
+  {% if forloop.last %}
+    {% break %}
+  {% endif %}
+  {{ author.first | slice: 0 }}. {{ author.last }},
+{% endfor %}
+
+{% assign last_author = entry.author_array | last %}
+{% if entry.author_array > 1 %}
+and
 {% endif %}
+{{ last_author.first | slice: 0 }}. {{ last_author.last }},
+
+<a href="{{ entry.url }}"><b>"{{ entry.title }}"</b></a>,
+
+{% if entry.type == "Theses" %}
+<i>{{ entry.school }}</i>,
+{% else %}
+{% if entry.booktitle %}
+in <i>{{ entry.booktitle }}</i>,
+{{ entry.address }},
+{% elsif entry.howpublished %}
+in <i>{{ entry.howpublished }}</i>,
+{% endif %}
+{% endif %}
+
+{{ entry.year }}
