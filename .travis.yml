@@ -1,0 +1,22 @@
+language: ruby
+rvm:
+  - 2.2.5
+
+env:
+  global:
+    - secure: "ABleEhzCsfjwd5QsF4FuAXLOmOEi2MnZxei++zSGidKZ3AzOXXMM85PznvrLHq2pxBUE0gCeDuc6+jC8SygLhR3pLMc+9dpsWk81uMwXQklzCAhA999c+0dGJEoZcbw4cToCjL9yKmxXOWnRemW8b32c1+5aqY92O0WVWNTo1a0=" #GITHUB_TOKEN
+
+before_script:
+  - chmod +x ./script/cibuild
+  - chmod +x ./script/deploy-pages
+
+script:
+  ./script/cibuild
+
+branches:
+  only: jekyll
+
+after_success:
+  - ./script/deploy-pages
+
+sudo: false
