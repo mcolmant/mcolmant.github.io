@@ -3,7 +3,9 @@
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
         {% for p in site.pages %}
-        <span class="icon-bar"></span>
+          {% if p.layout != None %}
+            <span class="icon-bar"></span>
+          {% endif %}
         {% endfor %}
       </button>
     </div>
