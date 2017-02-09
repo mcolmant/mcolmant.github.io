@@ -19,4 +19,9 @@ scholar:
   bibliography: bibliography.bib
   bibliography_template: entry-bib
 
+acceptance_rates:
+  'colmant:hal-01130030': '32/150 (~21%)'
+  'colmant:hal-01439889': '64/280 (~23%)'
+  'havet:hal-01403486': '14/58 (~24%)'
+
 exclude: ['Gemfile*', 'README.md', "*.sublime-project", "*.sublime-workspace", ".DS_Store", "script"]

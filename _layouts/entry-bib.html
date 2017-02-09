@@ -1,11 +1,6 @@
 ---
 ---
 
-<!-- {{ reference }}
-{{ entry}}
-{{index}} -->
-<!-- {{ entry.author_array }} -->
-
 [{{index}}]
 
 {% for author in entry.author_array %}
@@ -34,4 +29,8 @@ in <i>{{ entry.howpublished }}</i>,
 {% endif %}
 {% endif %}
 
-{{ entry.year }}
+{{ entry.year }}.
+
+{% if site.acceptance_rates[entry.key] %}
+  <b>Acceptance rate: {{ site.acceptance_rates[entry.key] }}</b>.
+{% endif %}
