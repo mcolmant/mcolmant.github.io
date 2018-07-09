@@ -12,4 +12,4 @@ rm -rf .bundle ./*
 mv $HOME/.deploy/* .
 git add -A .
 git commit -m 'feat: website updated.'
-git push --quiet "https://${GITHUB_TOKEN}@github.com/mcolmant/mcolmant.github.io" master --force
+git push --quiet "https://${GITHUB_TOKEN}:x-oauth-basic@github.com/mcolmant/mcolmant.github.io" master --force
