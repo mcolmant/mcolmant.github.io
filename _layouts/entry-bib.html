@@ -26,6 +26,8 @@ in <i>{{ entry.booktitle }}</i>,
 {{ entry.address }},
 {% elsif entry.howpublished %}
 in <i>{{ entry.howpublished }}</i>,
+{% elsif entry.journal %}
+in <i>{{ entry.journal }}</i>,
 {% endif %}
 {% endif %}
 

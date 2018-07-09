@@ -1,8 +1,8 @@
 # Site settings
 name: Maxime Colmant's website
 description: Personal website of Maxime Colmant
-url: http://mcolmant.github.io
-last_update: 06/2017
+url: https://mcolmant.github.io
+last_update: 07/2018
 
 # Build settings
 markdown: kramdown

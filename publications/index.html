@@ -19,6 +19,11 @@ additional_js: ''
     </div>
 
     <div class="col-md-12">
+      <h4>Journals</h4>
+      {% bibliography --query @article %}
+    </div>
+
+    <div class="col-md-12">
       <h4>Conferences</h4>
       {% bibliography --query @inproceedings %}
     </div>
