@@ -6,7 +6,7 @@ last_update: 07/2018
 
 # Build settings
 markdown: kramdown
-gems: ['jekyll/scholar', 'jekyll-sitemap']
+plugins: ['jekyll/scholar', 'jekyll-sitemap']
 
 scholar:
   style: ieee.csl
